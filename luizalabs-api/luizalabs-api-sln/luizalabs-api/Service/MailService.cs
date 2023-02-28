@@ -10,7 +10,8 @@ public class MailService
 {
     private static void SendMail(string to, string subject, string body)
     {
-        if (Params.IsTest) return;
+        if (Params.IsTest)
+            return;
 
         var client = new SmtpClient("smtp.gmail.com", 587)
         {
@@ -31,7 +32,7 @@ public class MailService
     {
         var subject = "Confirmação de cadastro";
         var body =
-            $@"Olá, para confirmar seu cadastro clique no link: http://localhost:8080/user/{userId}/confirm/{token}";
+            $@"Olá, para confirmar seu cadastro clique no link: ${Params.BaseUrlFrontEnd}/user/{userId}/confirm/{token}";
         SendMailAsync(to, subject, body);
     }
 
@@ -46,7 +47,7 @@ public class MailService
     {
         var subject = "Recuperação de senha";
         var body =
-            $@"Olá, para recuperar sua senha clique no link: http://localhost:8080/user/{userId}/password/reset/{token}";
+            $@"Olá, para recuperar sua senha clique no link: ${Params.BaseUrlFrontEnd}/user/{userId}/password/reset/{token}";
         SendMailAsync(to, subject, body);
     }
 }

@@ -22,6 +22,7 @@ public partial class Program
         Params.SecretKeyJWT = builder.Configuration["SecretKeyJWT"];
         Params.Email = builder.Configuration["Email"];
         Params.EmailPassword = builder.Configuration["EmailPassword"];
+        Params.BaseUrlFrontEnd = builder.Configuration["BaseUrlFrontEnd"];
         
         string connectiontString = builder.Configuration.GetConnectionString("DefaultConnection");
         services.AddDbContext<DatabaseContext>(options => options.UseMySQL(connectiontString));
