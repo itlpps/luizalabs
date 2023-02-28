@@ -23,7 +23,7 @@ cd luizalabs-app && yarn && yarn serve
 - AWS S3
 - AWS EC2
 
-## Design attern
+## Design pattern
 - Code First
 - MVC com repositório
 - Teste de integração
