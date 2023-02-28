@@ -32,7 +32,7 @@ public class MailService
     {
         var subject = "Confirmação de cadastro";
         var body =
-            $@"Olá, para confirmar seu cadastro clique no link: ${Params.BaseUrlFrontEnd}/user/{userId}/confirm/{token}";
+            $@"Olá, para confirmar seu cadastro clique no link: {Params.BaseUrlFrontEnd}/user/{userId}/confirm/{token}";
         SendMailAsync(to, subject, body);
     }
 
@@ -47,7 +47,7 @@ public class MailService
     {
         var subject = "Recuperação de senha";
         var body =
-            $@"Olá, para recuperar sua senha clique no link: ${Params.BaseUrlFrontEnd}/user/{userId}/password/reset/{token}";
+            $@"Olá, para recuperar sua senha clique no link: {Params.BaseUrlFrontEnd}/user/{userId}/password/reset/{token}";
         SendMailAsync(to, subject, body);
     }
 }
